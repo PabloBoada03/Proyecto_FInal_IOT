@@ -33,7 +33,7 @@ void conectarMQTT() {
 
 // --- Función para leer el sensor (real o simulado) ---
 float leerDistancia() {
-  // Si no tienes el sensor físico, descomenta la línea de simulación
+  
   // return random(5, 200) / 1.0; // Simula una distancia aleatoria
 
   digitalWrite(TRIG_PIN, LOW);
