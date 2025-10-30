@@ -1,7 +1,37 @@
-# 🚀 Proyecto ESP32 con Sensor HC-SR04 y MQTT
+<p align="center">
+  <img width="450" height="177" alt="image" src="https://github.com/user-attachments/assets/0f8c82ab-f28b-403f-8a24-c7b41b182b02" />
+</p>
 
-Este proyecto implementa la lectura de distancia con el **sensor ultrasónico HC-SR04** conectado a una **ESP32**, publicando los valores obtenidos en un **tema MQTT**.  
-El código también define los pines de motores y la configuración WiFi mediante constantes en un archivo `config.h`.
+<h1 align="center">Universidad de La Sabana</h1>
+<h3 align="center">Facultad de Ingeniería</h3>
+
+---
+
+## 🚀 Proyecto ESP32 con Sensor HC-SR04 y MQTT
+
+### 📘 Descripción del Proyecto
+Este proyecto implementa la **lectura de distancia** utilizando el **sensor ultrasónico HC-SR04**, conectado a una **placa ESP32**.  
+Los valores obtenidos son publicados en un **tema MQTT**, permitiendo el monitoreo remoto mediante un broker.  
+Además, el sistema incluye la definición de pines de motores y la configuración WiFi centralizada en un archivo `config.h`.
+
+---
+
+### 👨‍💻 Integrantes
+- Cristian Manuel Castañeda Gutiérrez  
+- Pablo Bohada  
+- Santiago Prieto Trujillo  
+
+---
+
+<p align="center">
+  <img width="425" height="425" alt="image" src="https://github.com/user-attachments/assets/0bf9401d-c987-48c3-98f7-021de7437280" />
+</p>
+
+<p align="center">
+  <b>Universidad de La Sabana</b><br>
+  Estudiantes de la Facultad de Ingeniería<br>
+  Chía, Cundinamarca — 2025
+</p>
 
 ## 📁 Estructura del Proyecto
 /main/
