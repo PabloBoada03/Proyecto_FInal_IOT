@@ -4,6 +4,8 @@
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
 #include "config.h"
+#include "cert.h"
+#include "key.h"
 
 // ---------------- Objetos globales ----------------
 static const char root_ca[] PROGMEM = R"EOF(
@@ -34,7 +36,7 @@ HTVYfMI1GOgMCtCbf0O+VsEYJqpCd68REUbO7fZHwBf15qK6q5qo
 
 WiFiClientSecure espClient;
 PubSubClient client(espClient);
-WebServer server(80);
+WifiServerSecure server(443);
 
 // ---------------- Variables globales ----------------
 int velocidad = 200;
@@ -614,6 +616,14 @@ void setup() {
   espClient.setCACert(root_ca);
 
   conectarWiFi();
+
+    // Load TLS certs
+  server.setServerKeyAndCert_P(
+    key_pem, key_pem_len,
+    cert_pem, cert_pem_len
+  );
+
+
   
   client.setServer(MQTT_BROKER, MQTT_PORT);
   client.setCallback(callback);
@@ -625,10 +635,11 @@ void setup() {
   server.on("/mqtt", handleMQTT);
   server.on("/distance", handleDistance);
   server.on("/status", handleStatus);
+  // Start secure HTTP server
   server.begin();
-  
-  Serial.println("🌐 Servidor HTTP iniciado");
-  Serial.print("🔗 Accede a: http://");
+  Serial.println("HTTPS server started on port 443");  
+  Serial.println("🌐 Servidor HTTPS iniciado");
+  Serial.print("🔗 Accede a: https://");
   Serial.println(WiFi.localIP());
   Serial.println("\n✅ Sistema listo\n");
 }
