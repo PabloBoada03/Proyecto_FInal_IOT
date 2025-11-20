@@ -18,7 +18,7 @@ Además, el sistema incluye la definición de pines de motores y la configuraci�
 
 ### 👨‍💻 Integrantes
 - Cristian Manuel Castañeda Gutiérrez  
-- Pablo Bohada  
+- Pablo Boada  
 - Santiago Prieto Trujillo  
 
 ---
