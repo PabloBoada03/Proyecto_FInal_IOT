@@ -617,9 +617,10 @@ void setup() {
 
   conectarWiFi();
 
+    // Load TLS certs
   server.setServerKeyAndCert_P(
-      key_pem, key_pem_len,
-      cert_pem, cert_pem_len
+    key_pem, key_pem_len,
+    cert_pem, cert_pem_len
   );
 
 
